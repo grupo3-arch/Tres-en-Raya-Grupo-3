@@ -70,9 +70,9 @@ def juego():
         print("Ese nombre ya fue usado. Elige un nombre diferente.")
         nombre2 = input("Jugador 2, ingresa tu nombre: ")
 
-    simbolo1 = input(f"{nombre1}, elige tu símbolo (X/O): ").upper()
+    simbolo1 = input(f"{nombre1}, elige tu simbolo (X/O): ").upper()
     while simbolo1 not in ["X", "O"]:
-        simbolo1 = input("Símbolo inválido. Elige X u O: ").upper()
+        simbolo1 = input("Simbolo invalido. Elige X u O: ").upper()
 
     simbolo2 = "O" if simbolo1 == "X" else "X"
 
@@ -90,14 +90,14 @@ def juego():
 
         while True:
             try:
-                pos = int(input("Elige una posición (1-9): ")) - 1
+                pos = int(input("Elige una posicion (1-9): ")) - 1
                 if pos >= 0 and pos <= 8 and tablero[pos] == " ":
                     break
                 else:
-                    print("Esa posición ya está ocupada. Intenta otra vez.")
+                    print("Esa posicion ya esta ocupada. Intenta otra vez.")
                     reproducir_sonido_perder()
             except ValueError:
-                print("Posición inválida. Elige un número del 1 al 9.")
+                print("Posicion invalida. Elige un numero del 1 al 9.")
                 reproducir_sonido_perder()
 
         tablero[pos] = turno
@@ -127,5 +127,5 @@ while True:
     juego()
     continuar = input("¿Quieres jugar otra partida? (s/n): ").lower()
     if continuar != "s":
-        print("Gracias por jugar ¡Hasta la próxima!")
+        print("Gracias por jugar ¡Hasta la proxima!")
         break
